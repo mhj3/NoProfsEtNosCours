@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} Dashboard {% endblock %}</title>
+    {% load staticfiles %}
+   {% block css %} <link rel="stylesheet" href="{% static 'css/MPdesign.css' %}" type="text/css"> {%endblock%}
+</head>
+<body>
+
+
+<div id="entete">
+    <h1> Nos Profs et Nos Cours Administration </h1>
+
+</div>
+{% block content_change %}
+<div id="corps">
+
+</div>
+
+<div id="pieds">
+
+</div>
+
+{% endblock %}
+</body>
+</html>

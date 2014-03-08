@@ -1,0 +1,15 @@
+{% extends 'PagesBackend/MasterPage.html' %}
+
+
+{% block title %} Suppression {% endblock %}
+
+
+{% block content_change %}
+ <div class="SuppEtab">
+    <form action="/supprimer/" method="GET">{% csrf_token %}
+        <p> Nom:  <input type="text" value="{{SuppEtab.Nom}}"></p>
+        <p> Lieu: <input type="text" value="{{SuppEtab.Lieu}}"></p>
+        <p><input type="submit" value="Supprimer"></p>
+    </form>
+ </div>
+{% endblock %}

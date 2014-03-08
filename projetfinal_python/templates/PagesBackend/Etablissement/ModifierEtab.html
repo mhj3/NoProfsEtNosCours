@@ -1,0 +1,14 @@
+{% extends 'PagesBackend/MasterPage.html' %}
+
+
+{% block title %} Ajout Etablissement {% endblock %}
+
+  {% block content_change %}
+<div class="formModif">
+    <form action="/sauvegarder/" method="GET">{% csrf_token %}
+        <p> Nom:  <input type="text" value="{{formModif.Nom}}"></p>
+        <p> Lieu: <input type="text" value="{{formModif.Lieu}}"></p>
+        <p><input type="Submit" value="Sauvegarder"></p>
+    </form>
+</div>
+{% endblock %}

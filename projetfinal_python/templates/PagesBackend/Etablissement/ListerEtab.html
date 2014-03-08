@@ -1,0 +1,39 @@
+{% extends 'PagesBackend/MasterPage.html' %}
+
+
+{% block title %} Listing {% endblock %}
+        {% load staticfiles %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/design.css' %}" type="text/css" >{%endblock%}
+
+  {% block content_change %}
+
+<div class="listEtab">
+    <table class="table" summary="Meeting Results">
+        <thead>
+        <tr>
+            <th colspan="6" style="background: #fff;height:50px"><a href="../ajouter/" style="margin-left:5px">Ajouter un nouveau Etablissement </a>
+            </th>
+        </tr>
+        <tr>
+            <th>Etablissement</th>
+            <th>Lieu</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for etab in listEtab %}
+        <tr>
+            <td>{{etab.Nom}}</td>
+            <td>{{etab.Lieu}}</td>
+            <td><a href="../modifier/{{etab.id}}/">Modifier</a> <a
+                    href="../supprimer/{{etab.id}}/">Supprimer</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</div>
+
+
+{% endblock %}

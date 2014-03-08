@@ -1,0 +1,14 @@
+{% extends 'PagesBackend/MasterPage.html' %}
+
+
+{% block title %} Ajout Etablissement {% endblock %}
+
+  {% block content_change %}
+<div class="formAjout">
+    <form action="." method="GET">{% csrf_token %}
+        <p> Nom:  <input type="text" name="Nom"></p>
+        <p> Lieu: <input type="text" name="Lieu"></p>
+        <p><input type="Submit" value="Sauvegarder"></p>
+    </form>
+</div>
+{% endblock %}

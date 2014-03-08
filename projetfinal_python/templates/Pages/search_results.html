@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<p> You searched for: <strong>{{ query }} </strong></p>
+
+{%if cours%}
+    <p> Found {{ cours|length }} cour{{ Cours|pluralize }}.</p>
+    <ul>
+        {% for cour in Cours %}
+        <li>{{ cour.title }} </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> Aucun cours ne correpond a votre critere de recherche </p>
+</body>
+</html>
